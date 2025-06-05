@@ -1,3 +1,25 @@
+firstly we have to register where i added the role option here and functionality of project is baed on roles 
+after we login to companies page where there is a list of companies here we can add new company and see the list of companies and 
+when we click on any company it shows the list of teams under that company and we can also add new team here based on role 
+and when we click on any tem it show related projects and only manger can add new project and manager can assign a project to the member 
+and in task section manager and owner can view tasks but member can view only that task which assigned to him
+
+some functionality are pending which i can't able to complete due to lack of time are like subtask, attachment, activitylogs etc.
+
+
+login credentials are
+for owner  (id- owner@gmail.com  , password- 123456)
+for manager  (id- manager@gmail.com  , password- 123456)
+for member  (id- member@gmail.com  , password- 123456)
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
