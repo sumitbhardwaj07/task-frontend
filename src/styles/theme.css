@@ -1,0 +1,168 @@
+/* theme.css */
+
+/* Root color palette and theme variables */
+:root {
+  /* Colors */
+  --color-primary: #3b82f6;      /* blue-500 */
+  --color-primary-dark: #2563eb; /* blue-600 */
+  --color-primary-light: #93c5fd; /* blue-300 */
+  --color-secondary: #10b981;    /* green-500 */
+  --color-secondary-dark: #047857; /* green-700 */
+  --color-bg: #f9fafb;           /* gray-50 */
+  --color-surface: #ffffff;      /* white */
+  --color-text-primary: #111827; /* gray-900 */
+  --color-text-secondary: #6b7280; /* gray-500 */
+  --color-border: #d1d5db;       /* gray-300 */
+  --color-error: #ef4444;        /* red-500 */
+  --color-warning: #f59e0b;      /* yellow-500 */
+  --color-success: #22c55e;      /* green-500 */
+
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --font-size-base: 1rem;  /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;  /* 6px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 1rem;      /* 16px */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1f2937;           /* gray-800 */
+    --color-surface: #374151;      /* gray-700 */
+    --color-text-primary: #f9fafb; /* gray-50 */
+    --color-text-secondary: #9ca3af; /* gray-400 */
+    --color-border: #4b5563;       /* gray-600 */
+  }
+}
+
+/* Base body styling */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.2s ease;
+}
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+button:disabled {
+  background-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+/* Inputs */
+input, select, textarea {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Cards and surfaces */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Alerts */
+.alert {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.alert-error {
+  background-color: #fee2e2; /* red-100 */
+  color: var(--color-error);
+}
+
+.alert-warning {
+  background-color: #fef3c7; /* yellow-100 */
+  color: var(--color-warning);
+}
+
+.alert-success {
+  background-color: #dcfce7; /* green-100 */
+  color: var(--color-success);
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
